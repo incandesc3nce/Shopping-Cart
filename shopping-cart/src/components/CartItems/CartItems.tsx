@@ -1,18 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  setArray,
-  addToArray,
   removeFromArray,
-  clearArray,
 } from '../../store/arraySlice';
 
 const CartItems = () => {
   const array = useSelector((state: any) => state.array);
   const dispatch = useDispatch();
-
-  const handleClearCart = () => {
-    dispatch(clearArray());
-  };
 
   const handleRemoveItem = (item: any) => {
     dispatch(removeFromArray(item));

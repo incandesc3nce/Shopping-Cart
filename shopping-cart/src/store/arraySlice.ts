@@ -1,25 +1,25 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import IItemCard from '../interfaces/IItemCard';
+
+interface ItemWtihQuantity {
+  item: IItemCard;
+  quantity: number;
+}
 
 const arraySlice = createSlice({
   name: 'array',
-  initialState: [],
+  initialState: [] as ItemWtihQuantity[],
   reducers: {
-    setArray: (state, action) => {
-      return action.payload;
-    },
-    addToArray: (state, action) => {
+    addToArray: (state, action: PayloadAction<ItemWtihQuantity>) => {
       state.push(action.payload);
     },
-    removeFromArray: (state, action) => {
-      return state.filter(item => item.item.id !== action.payload.item.id);
-    },
-    clearArray: () => {
-      return [];
+    removeFromArray: (state, action: PayloadAction<ItemWtihQuantity>) => {
+      return state.filter((item: any) => item.item.id !== action.payload.item.id);
     },
   },
 });
 
-export const { setArray, addToArray, removeFromArray, clearArray } =
+export const { addToArray, removeFromArray } =
   arraySlice.actions;
 
 export default arraySlice.reducer;

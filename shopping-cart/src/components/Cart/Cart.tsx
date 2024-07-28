@@ -2,7 +2,7 @@ import Navbar from '../NavBar/Navbar';
 import Footer from '../Footer/Footer';
 import CartItems from '../CartItems/CartItems';
 
-const Cart = ({ items }: any) => (
+const Cart = () => (
   <>
     <Navbar />
     <div className="min-h-screen">

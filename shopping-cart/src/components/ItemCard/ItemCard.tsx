@@ -1,17 +1,13 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import { useState } from 'react';
 import IItemCard from '../../interfaces/IItemCard';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {
-  setArray,
   addToArray,
-  removeFromArray,
-  clearArray,
 } from '../../store/arraySlice';
 
 const ItemCard = ({ item }: { item: IItemCard }) => {
   const [quantity, setQuantity] = useState(1);
-  const array = useSelector((state: any) => state.array);
   const dispatch = useDispatch();
 
   const handleReduceQuantity = () => {
@@ -64,7 +60,8 @@ const ItemCard = ({ item }: { item: IItemCard }) => {
           type="button"
           className="rounded-3xl bg-emerald-500 p-2 text-white hover:bg-emerald-600"
           onClick={() => {
-            dispatch(addToArray({ item, quantity }));
+            const itemWithQuantity = { item, quantity };
+            dispatch(addToArray(itemWithQuantity));
             setQuantity(1);
           }}
         >
