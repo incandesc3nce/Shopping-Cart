@@ -47,19 +47,19 @@ const items: IItemCard[] = [
     id: 8,
     title: 'Kaws White T-Shirt',
     price: 800,
-    imgUrl: 'src/assets/kaws-items/item_8.png',
+    imgUrl: 'src/assets/kaws-items/item_8.jpg',
   },
   {
     id: 9,
     title: 'Batman Kaws Figure',
     price: 900,
-    imgUrl: 'src/assets/kaws-items/item_9.png',
+    imgUrl: 'src/assets/kaws-items/item_9.jpg',
   },
   {
     id: 10,
     title: 'Kaws Chum Figure',
     price: 1000,
-    imgUrl: 'src/assets/kaws-items/item_10.png',
+    imgUrl: 'src/assets/kaws-items/item_10.jpg',
   },
 ];
 
