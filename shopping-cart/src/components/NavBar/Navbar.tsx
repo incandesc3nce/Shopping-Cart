@@ -13,7 +13,7 @@ const Navbar = () => (
         </li>
       </ul>
       <div>
-        <Link to="cart">Cart</Link>
+        <Link to="/cart">Cart</Link>
       </div>
     </nav>
   </header>
