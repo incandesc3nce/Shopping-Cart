@@ -1,5 +1,3 @@
-import '../../main.css';
-
 const Navbar = () => (
   <div className="pl-4 pr-4 flex space-x-10 p-2 font-sans bg-sky-200">
     <h1 className="text-3xl font-bold">KUWS</h1>

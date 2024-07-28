@@ -4,7 +4,7 @@ const HomePage = () => (
       <div className="flex justify-center">
         <img src="src/assets/home_kaws.jpg" alt="Kaws logo" />
       </div>
-      <div className="text text-center text-3xl">
+      <div className="text-center text-3xl">
         <p>Welcome to</p>
         <b>KUWS Exclusive</b>
         <p>The best online store for Kaws.</p>
