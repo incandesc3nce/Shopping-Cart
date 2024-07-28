@@ -1,5 +1,5 @@
 const Footer = () => (
-  <footer className="bg-sky-200">
+  <footer className="bg-sky-200 mt-10">
     <div className="flex justify-center mb-4">
       <address className="flex flex-col not-italic">
         <p>Kaws Lane 555, Suite C </p>
