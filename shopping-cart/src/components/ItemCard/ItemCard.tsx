@@ -25,7 +25,7 @@ const ItemCard = ({ item }: { item: IItemCard }) => {
         className="h-64 w-64 rounded-3xl object-cover"
       />
       <h3 className="mt-2 text-center text-3xl font-semibold">{item.title}</h3>
-      <p className="ml-auto text-2xl">${item.price}</p>
+      <p className="ml-auto text-2xl mt-3">${item.price}</p>
       <div className="mt-6 flex w-full items-center justify-between">
         <div className="flex items-center">
           <button
