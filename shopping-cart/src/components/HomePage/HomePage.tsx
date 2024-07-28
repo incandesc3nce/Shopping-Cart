@@ -1,10 +1,12 @@
+import home_kaws from '../../assets/home_kaws.jpg';
+
 const HomePage = () => (
   <div id="main-content">
     <main>
       <div className="flex justify-center">
-        <img src="src/assets/home_kaws.jpg" alt="Kaws logo" />
+        <img src={home_kaws} alt="Kaws logo" />
       </div>
-      <div className="text-center text-3xl flex flex-col items-center">
+      <div className="flex flex-col items-center text-center text-3xl">
         <p>Welcome to</p>
         <b>KUWS Exclusive</b>
         <p>The best online store for Kaws.</p>
