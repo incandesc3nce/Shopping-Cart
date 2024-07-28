@@ -1,9 +1,18 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import { useState } from 'react';
 import IItemCard from '../../interfaces/IItemCard';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  setArray,
+  addToArray,
+  removeFromArray,
+  clearArray,
+} from '../../store/arraySlice';
 
 const ItemCard = ({ item }: { item: IItemCard }) => {
   const [quantity, setQuantity] = useState(1);
+  const array = useSelector((state: any) => state.array);
+  const dispatch = useDispatch();
 
   const handleReduceQuantity = () => {
     if (quantity > 1) {
@@ -25,7 +34,7 @@ const ItemCard = ({ item }: { item: IItemCard }) => {
         className="h-64 w-64 rounded-3xl object-cover"
       />
       <h3 className="mt-2 text-center text-3xl font-semibold">{item.title}</h3>
-      <p className="ml-auto text-2xl mt-3">${item.price}</p>
+      <p className="ml-auto mt-3 text-2xl">${item.price}</p>
       <div className="mt-6 flex w-full items-center justify-between">
         <div className="flex items-center">
           <button
@@ -54,6 +63,10 @@ const ItemCard = ({ item }: { item: IItemCard }) => {
         <button
           type="button"
           className="rounded-3xl bg-emerald-500 p-2 text-white hover:bg-emerald-600"
+          onClick={() => {
+            dispatch(addToArray({ item, quantity }));
+            setQuantity(1);
+          }}
         >
           Add to Cart
         </button>
